@@ -21,7 +21,8 @@ ybar = en_mean(2,k);
 plot(xbar,ybar,'*k','MarkerSize',10);
 hold on
 title(['Distribution of assimilated parameters at time step ',num2str(k-1)]);
-xlabel('Parameter 1'); ylabel('Parameter 2');
+%xlabel('Parameter 1'); ylabel('Parameter 2');
+xlabel([par_ensemble.Properties.VariableNames(1), ' kPa']); ylabel([par_ensemble.Properties.VariableNames(2), ' kPa']);
 % plot covariance ellipse
 xarr = [];
 yarr1 = [];

@@ -26,7 +26,7 @@ d_calc = readtable([path_data, filename], 'VariableNamingRule', 'preserve');
 %d_calc.(stages(2))
 
 % Covariance matrix
-cvrc = 10.0^2*diag(ones(obs_number,1));
+cvrc = 20.0^2*diag(ones(obs_number,1));
 
 
 %% Data assimilation
@@ -98,6 +98,6 @@ for i=1:nprm
     plot(1:sstep+1,en_mean(i,1:sstep+1)+en_std(i,1:sstep+1),'--r','Linewidth',1); hold on
     plot(1:sstep+1,en_mean(i,1:sstep+1)-en_std(i,1:sstep+1),'--r','Linewidth',1);
     legend('mean','mean+/-std');
-    title(['Assimilated parameter ',num2str(i)]);
+    title(['Assimilated parameter ',par_ensemble.Properties.VariableNames(i), 'kPa']);
     xlabel('Time step'); ylabel('Mean parameter value');
 end

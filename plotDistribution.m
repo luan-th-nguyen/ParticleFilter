@@ -12,6 +12,7 @@ for e=1:nsample
     plot(par_ensemble{e,par},wght{e},'o','MarkerSize',5); hold on;
 end
 title(['Distribution of assimilated parameter at time step ',num2str(k-1)]);
-xlabel(['Parameter ',num2str(par)]); ylabel('Weight');
+%xlabel(['Parameter ',num2str(par)]); ylabel('Weight');
+xlabel([par_ensemble.Properties.VariableNames(par), ' kPa']); ylabel('Weight');
 
 end
