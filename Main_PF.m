@@ -3,7 +3,8 @@ set(0,'defaulttextinterpreter','latex','DefaultAxesFontSize',12) % for plotting
 
 %% Input data
 % Read the particles from file
-path_data = '.\data_TruongLe';
+path_data = '.\data_TL_400samples';
+%path_data = '.\data_TL_40samples';
 filename = '\input.csv';
 parameters = ["E", "Su"];
 par_ensemble = readtable([path_data, filename], 'VariableNamingRule', 'preserve');
